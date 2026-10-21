@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco Ponciano | IA & Automação Operacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-cyan-500/20">
+                    FP
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-none text-white">Francisco Ponciano</h1>
+                    <p class="text-xs text-cyan-400 mt-1 font-mono">Operações & Automação de IA</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 text-sm">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
+                    Disponível para Projetos
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-12">
+
+        <!-- Hero Section -->
+        <section class="text-center space-y-4 max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+                Engenharia de Automação & Inteligência em Operações
+            </h2>
+            <p class="text-slate-400 text-base sm:text-lg">
+                Hub interativo de demonstradores de IA aplicada ao <span class="text-cyan-400 font-semibold">Last Mile</span>, mitigação de fraudes e orquestração autônoma de fluxos operacionais.
+            </p>
+        </section>
+
+        <!-- Live Showcase Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Simulator 1: Antifraude -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono px-2 py-1 bg-cyan-950 text-cyan-400 rounded border border-cyan-800">Vision AI + OpenCV</span>
+                        <span class="text-xs text-slate-500 font-mono">Demo Interativa</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Detector Antifraude de Comprovantes</h3>
+                    <p class="text-slate-400 text-sm mb-6">Validação automatizada de entregas via análise espacial de GPS EXIF, hashing de integridade e inteligência visual.</p>
+
+                    <!-- Interactive Box -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-4">
+                        <div class="text-xs text-slate-400 font-mono flex justify-between">
+                            <span>Status da Validação:</span>
+                            <span id="fraud-status" class="text-amber-400 font-bold">Aguardando Execução</span>
+                        </div>
+                        <div class="w-full bg-slate-900 rounded-full h-2 overflow-hidden">
+                            <div id="fraud-bar" class="bg-cyan-500 h-full w-0 transition-all duration-500"></div>
+                        </div>
+                        <div id="fraud-log" class="text-xs font-mono text-slate-400 bg-slate-900 p-3 rounded border border-slate-800/80 h-28 overflow-y-auto space-y-1">
+                            > Sistema pronto. Clique em "Simular Análise de Comprovante".
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="runFraudDemo()" class="mt-6 w-full py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold rounded-xl transition shadow-lg shadow-cyan-900/20 text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-play text-xs"></i>
+                    <span>Simular Análise Antifraude</span>
+                </button>
+            </div>
+
+            <!-- Simulator 2: CodeWeave SDR -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono px-2 py-1 bg-purple-950 text-purple-400 rounded border border-purple-800">n8n + Docker + Postgres</span>
+                        <span class="text-xs text-slate-500 font-mono">Demo Interativa</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">CodeWeave SDR — Agente Autônomo</h3>
+                    <p class="text-slate-400 text-sm mb-6">Orquestração de atendimento e qualificação de Leads com prevenção rigorosa de duplicatas e guardrails de segurança.</p>
+
+                    <!-- Interactive Box -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-4">
+                        <div class="text-xs text-slate-400 font-mono flex justify-between">
+                            <span>Fluxo de Agente:</span>
+                            <span id="agent-status" class="text-purple-400 font-bold">Standby</span>
+                        </div>
+                        <div id="agent-chat" class="text-xs font-mono text-slate-400 bg-slate-900 p-3 rounded border border-slate-800/80 h-28 overflow-y-auto space-y-2">
+                            <div class="text-slate-500">> Digite uma mensagem de teste ou simule um lead de entrada...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="runAgentDemo()" class="mt-6 w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold rounded-xl transition shadow-lg shadow-purple-900/20 text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-robot text-xs"></i>
+                    <span>Simular Atendimento de Lead</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Tech Stack Badge Strip -->
+        <section class="bg-slate-900/40 border border-slate-800/60 rounded-xl p-6 text-center">
+            <h4 class="text-xs font-mono text-slate-500 uppercase tracking-wider mb-4">Stack Tecnológico & Ferramentas Operacionais</h4>
+            <div class="flex flex-wrap justify-center gap-3 text-xs font-mono text-slate-300">
+                <span class="px-3 py-1.5 bg-slate-800 rounded-lg border border-slate-700">Python</span>
+                <span class="px-3 py-1.5 bg-slate-800 rounded-lg border border-slate-700">OpenCV</span>
+                <span class="px-3 py-1.5 bg-slate-800 rounded-lg border border-slate-700">n8n Workflow</span>
+                <span class="px-3 py-1.5 bg-slate-800 rounded-lg border border-slate-700">Docker</span>
+                <span class="px-3 py-1.5 bg-slate-800 rounded-lg border border-slate-700">Claude Code / LangChain</span>
+                <span class="px-3 py-1.5 bg-slate-800 rounded-lg border border-slate-700">FastAPI</span>
+                <span class="px-3 py-1.5 bg-slate-800 rounded-lg border border-slate-700">PostgreSQL</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Script de Simulação -->
+    <script>
+        function runFraudDemo() {
+            const status = document.getElementById('fraud-status');
+            const bar = document.getElementById('fraud-bar');
+            const log = document.getElementById('fraud-log');
+
+            status.innerText = "Em Análise...";
+            status.className = "text-cyan-400 font-bold animate-pulse";
+            bar.style.width = "30%";
+            log.innerHTML = "> Carregando comprovante de imagem...\n";
+
+            setTimeout(() => {
+                bar.style.width = "60%";
+                log.innerHTML += "> Extraindo metadados EXIF & coordenadas GPS...\n";
+            }, 800);
+
+            setTimeout(() => {
+                bar.style.width = "85%";
+                log.innerHTML += "> Verificando Hash SHA-256 e consistência de pixel (OpenCV)...\n";
+            }, 1600);
+
+            setTimeout(() => {
+                bar.style.width = "100%";
+                status.innerText = "Aprovado (Sem Fraude)";
+                status.className = "text-emerald-400 font-bold";
+                log.innerHTML += "> [OK] Score de Risco: 0.02 (Seguro)\n> [OK] Registro validado no banco de dados com sucesso!";
+            }, 2400);
+        }
+
+        function runAgentDemo() {
+            const status = document.getElementById('agent-status');
+            const chat = document.getElementById('agent-chat');
+
+            status.innerText = "Processando...";
+            chat.innerHTML = `<div class="text-cyan-400">Lead: "Gostaria de saber o prazo para entregas na zona sul."</div>`;
+
+            setTimeout(() => {
+                chat.innerHTML += `<div class="text-purple-400">> Agente (n8n): Consultando tabela de SLA e CEP...</div>`;
+            }, 1000);
+
+            setTimeout(() => {
+                chat.innerHTML += `<div class="text-emerald-400 font-semibold">> Resposta Autônoma: "O prazo médio para a Zona Sul é de até 2 horas úteis. Deseja agendar a coleta agora?"</div>`;
+                status.innerText = "Concluído";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
